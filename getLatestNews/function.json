@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 */1 * * *"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "outDatabase",
+      "collectionName": "topPosts",
+      "createIfNotExists": false,
+      "connection": "startup-insights_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
